@@ -6,4 +6,4 @@ It features an age verification circumvention and a signature deciphering method
 
 * Powered By : [AndroWeb](https://aweb41.github.io/AWeb)
 
-## Blog : [CBox-Dev](https://cbox-dev.github.io)
+## Blog : [CBox-Dev](https://cbox-dev.github.io/CBox-Dev)
