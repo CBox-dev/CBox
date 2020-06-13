@@ -206,62 +206,6 @@
 
 		</activity>
 
-		<activity
-			android:name="com.cbox.dev.engine.app.media.DevDownloadActivity"
-			android:excludeFromRecents="true"
-			android:taskAffinity=""
-			android:theme="@style/ATheme">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.SEND"/>
-
-				<category
-					android:name="android.intent.category.DEFAULT"/>
-
-				<data
-					android:mimeType="text/plain"/>
-
-			</intent-filter>
-
-		</activity>
-
-		<activity
-			android:name="com.cbox.dev.engine.app.media.DownloadActivity"
-			android:theme="@style/ATheme"
-			android:excludeFromRecents="true"
-			android:taskAffinity="">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.SEND"/>
-
-				<category
-					android:name="android.intent.category.DEFAULT"/>
-
-				<data
-					android:mimeType="text/plain"/>
-
-			</intent-filter>
-
-		</activity>
-
-		<receiver
-			android:name="com.cbox.dev.engine.app.media.DownloadFinishedReceiver"
-			android:exported="true"
-			android:process="com.cbox.dev.engine.app.media.dlFinished">
-
-			<intent-filter>
-
-				<action
-					android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
-
-			</intent-filter>
-
-		</receiver>
-
 	</application>
 
 </manifest>
