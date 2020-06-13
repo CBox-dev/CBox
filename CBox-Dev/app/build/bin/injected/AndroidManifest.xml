@@ -6,18 +6,31 @@
 	android:versionName="1.0">
 
 	<uses-sdk
-		android:minSdkVersion="14"
+		android:minSdkVersion="17"
 		android:targetSdkVersion="29"/>
+
+	<uses-permission
+		android:name="android.permission.INTERNET"/>
+
+	<uses-permission
+		android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+	<uses-permission
+		android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+	<uses-permission
+		android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
 
 	<application
 		android:allowBackup="true"
-		android:icon="@drawable/ic_launcher"
+		android:icon="@mipmap/ic_launcher"
 		android:label="@string/app_name"
 		android:theme="@style/AppTheme"
+		android:supportsRtl="true"
 		android:resizeableActivity="true">
 
 		<activity
-			android:name=".MainActivity"
+			android:name=".DevActivity"
 			android:label="@string/app_name">
 
 			<intent-filter>
@@ -31,6 +44,223 @@
 			</intent-filter>
 
 		</activity>
+
+		<activity
+			android:label="@string/youtube_api_demo"
+			android:name="com.cbox.dev.engine.app.media.youtube.YouTubeAPIDemoActivity">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.MAIN"/>
+
+				<category
+					android:name="android.intent.category.DEFAULT"/>
+
+			</intent-filter>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="false"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/videowall_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.VideoWallDemoActivity"
+			android:screenOrientation="landscape"
+			android:theme="@style/BlackNoBarsTheme"
+			android:configChanges="orientation|screenSize|keyboardHidden">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="11"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/videolist_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.VideoListDemoActivity"
+			android:configChanges="orientation|keyboardHidden|screenSize">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="13"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/playerview_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.PlayerViewDemoActivity"
+			android:screenOrientation="nosensor"
+			android:configChanges="orientation|screenSize|keyboardHidden">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="8"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/fragment_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.FragmentDemoActivity"
+			android:screenOrientation="nosensor"
+			android:configChanges="orientation|screenSize|keyboardHidden">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="11"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/player_controls_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.PlayerControlsDemoActivity"
+			android:windowSoftInputMode="stateHidden">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="8"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/fullscreen_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.FullscreenDemoActivity"
+			android:screenOrientation="sensor"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+			android:theme="@style/BlackNoTitleBarTheme">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="8"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/action_bar_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.ActionBarDemoActivity"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+			android:theme="@style/OverlayActionBarTheme"
+			android:screenOrientation="sensorLandscape">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="11"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/standalone_player_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.StandalonePlayerDemoActivity">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="8"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:label="@string/intents_demo_name"
+			android:name="com.cbox.dev.engine.app.media.youtube.IntentsDemoActivity">
+
+			<meta-data
+				android:name="@string/minVersion"
+				android:value="8"/>
+
+			<meta-data
+				android:name="@string/isLaunchableActivity"
+				android:value="true"/>
+
+		</activity>
+
+		<activity
+			android:name="com.cbox.dev.engine.app.media.DevDownloadActivity"
+			android:excludeFromRecents="true"
+			android:taskAffinity=""
+			android:theme="@style/ATheme">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.SEND"/>
+
+				<category
+					android:name="android.intent.category.DEFAULT"/>
+
+				<data
+					android:mimeType="text/plain"/>
+
+			</intent-filter>
+
+		</activity>
+
+		<activity
+			android:name="com.cbox.dev.engine.app.media.DownloadActivity"
+			android:theme="@style/ATheme"
+			android:excludeFromRecents="true"
+			android:taskAffinity="">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.SEND"/>
+
+				<category
+					android:name="android.intent.category.DEFAULT"/>
+
+				<data
+					android:mimeType="text/plain"/>
+
+			</intent-filter>
+
+		</activity>
+
+		<receiver
+			android:name="com.cbox.dev.engine.app.media.DownloadFinishedReceiver"
+			android:exported="true"
+			android:process="com.cbox.dev.engine.app.media.dlFinished">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+
+			</intent-filter>
+
+		</receiver>
 
 	</application>
 

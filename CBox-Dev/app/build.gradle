@@ -5,7 +5,7 @@ android {
 
     defaultConfig {
         applicationId "com.cbox.dev"
-        minSdkVersion 14
+        minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -18,11 +18,16 @@ android {
     }
 }
 
+
 dependencies {
 	api 'com.android.support:customtabs:27.0.2'
 	api 'com.android.support:appcompat-v7:27.0.2'
 	api 'com.android.support:design:27.0.2'
+	api project(':YtExtractor')
 	
+    implementation 'org.aspectj:aspectjrt:1.8.13'
+    implementation 'com.googlecode.mp4parser:isoparser:1.1.22'
+
 	implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
 	implementation 'com.github.bumptech.glide:glide:3.7.0'
    
